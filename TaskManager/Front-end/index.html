@@ -14,41 +14,41 @@
 
         <div class="user">
             <img src="/Front-end/Images/user-pic.JPG" alt="User picture">
-            <h3>User Name</h3>
+            <h3 id="user-name">Romain Sales</h3>
         </div>
 
         <div class="long-task-reminder">
             <h4 class="long-task-title">Long task reminder</h4>
             <ul class="long-task-list">
-                <li> <img src="/Front-end/UI Kit/cercle-checkbox.png" alt="UI circle purple check box">long task 1</li>
-                <li><img src="/Front-end/UI Kit/cercle-checkbox.png" alt="UI circle purple check box">long task 2</li>
-                <li><img src="/Front-end/UI Kit/cercle-checkbox.png" alt="UI circle purple check box">long task 3</li>
+                <li> <img src="/Front-end/UI-Kit/cercle-checkbox.png" alt="UI circle purple check box">long task 1</li>
+                <li><img src="/Front-end/UI-Kit/cercle-checkbox.png" alt="UI circle purple check box">long task 2</li>
+                <li><img src="/Front-end/UI-Kit/cercle-checkbox.png" alt="UI circle purple check box">long task 3</li>
             </ul>
         </div>
 
         <div class="choose-date">
             <ul class="choose-date-list">
-                <li><img src="/Front-end/UI Kit/cercle-checkbox.png" alt="UI circle purple check box">Today</li>
-                <li><img src="/Front-end/UI Kit/cercle-checkbox.png" alt="UI circle purple check box">Tomorrow</li>
-                <li><img src="/Front-end/UI Kit/cercle-checkbox.png" alt="UI circle purple check box">In 2 days</li>
-                <li><img src="/Front-end/UI Kit/cercle-checkbox.png" alt="UI circle purple check box">All</li>
+                <li class="btn"><img src="/Front-end/UI-Kit/cercle-checkbox.png" alt="UI circle purple check box">Today</li>
+                <li class="btn"><img src="/Front-end/UI-Kit/cercle-checkbox.png" alt="UI circle purple check box">Tomorrow</li>
+                <li class="btn"><img src="/Front-end/UI-Kit/cercle-checkbox.png" alt="UI circle purple check box">In 2 days</li>
+                <li class="btn"><img src="/Front-end/UI-Kit/cercle-checkbox.png" alt="UI circle purple check box">All</li>
             </ul>
         </div>
 
         <div class="tags">
             <div class="tags-title">
                 <h4>Tags</h4>
-                <img src="/Front-end/UI Kit/plus.png" alt="Add new tag button">
+                <img src="/Front-end/UI-Kit/plus.png" alt="Add new tag button">
             </div>
             <ul class="tags-list">
-                <li><img src="/Front-end/UI Kit/tags.png" alt="UI tags">tags 1</li>
-                <li><img src="/Front-end/UI Kit/tags.png" alt="UI tags">tags 2</li>
-                <li><img src="/Front-end/UI Kit/tags.png" alt="UI tags">tags 3</li>
+                <li><img src="/Front-end/UI-Kit/tags.png" alt="UI tags">tags 1</li>
+                <li><img src="/Front-end/UI-Kit/tags.png" alt="UI tags">tags 2</li>
+                <li><img src="/Front-end/UI-Kit/tags.png" alt="UI tags">tags 3</li>
             </ul>
         </div>
         <div class="add-new-task">
-        <button>
-            <img src="/Front-end/UI Kit/gros-plus.png" alt="Add new task button">
+        <button class="btn">
+            <img src="/Front-end/UI-Kit/gros-plus.png" alt="Add new task button">
         </button>
         </div>
     </section>
@@ -57,12 +57,12 @@
 
         <header>
             <div class="left-side-header">
-                <button class="left-side-nav">
-                    <img class="UI-btn" src="/Front-end/UI Kit/notification.png" alt="">
+                <button class="left-side-nav btn">
+                    <img class="UI-btn" src="/Front-end/UI-Kit/notification.png" alt="">
                 </button>
 
-                <button class="left-side-nav">
-                    <img class="UI-btn" src="/Front-end/UI Kit/plus.png" alt="Add new task button">
+                <button class="left-side-nav btn">
+                    <img class="UI-btn" src="/Front-end/UI-Kit/plus.png" alt="Add new task button">
                 </button>
 
                 <input class="search-bar" type="text" name="search" placeholder="🔎​ Search a task ">
@@ -71,13 +71,13 @@
             <div class="right-side-header">
                 <h1 class="web-site-name">WebSiteName</h1>
                 <div class="btn-dropdown">
-                    <button class="btn-menu">
-                        <img src="" alt="UI Menu button">
+                    <button class="btn-menu btn">
+                        <img class="UI-btn" src="/Front-end/UI-Kit/menu.png" alt="UI Menu button">
                     </button>
                     <div class="dropdown-menu">
-                        <button class="btn-dropdown-menu">Nouvelle Tache</button>
-                        <button class="btn-dropdown-menu">Parametre</button>
-                        <button class="btn-dropdown-menu">Preferences</button>
+                        <button class="btn-dropdown-menu btn">New Task <img src="/Front-end/UI-Kit/gros-plus.png" alt="UI new task button"></button>
+                        <button class="btn-dropdown-menu btn">Parameters <img src="/Front-end/UI-Kit/parametres.png" alt="UI parametres button"></button>
+                        <button class="btn-dropdown-menu btn">Preferences <img src="/Front-end/UI-Kit/preferences.png" alt="UI preferences button"></button>
                     </div>
                 </div>
             </div>
@@ -87,15 +87,37 @@
         <div class="main">
             <div class="day-container">
                 <p class="selected-day">Aujourd'hui</p>
-                <button class="btn-filter">
-                    <img src="" alt="UI filter button">
+                <button class="btn-filter btn">
+                    <img src="/Front-end/UI-Kit/preferences.png" alt="UI filter button">
                 </button>
             </div>
 
             <div class="task-container">
                 <div class="task">
-                    <button class="btn-done">
-                        <img src="" alt="UI cross when task done">
+                    
+                    <button class="btn-done btn"><img src="/Front-end/UI-Kit/square-checkbox.png" alt="UI cross when task done"></button>
+                    <h6 class="task-name">Achter du pain</h6>
+                    <p class="task-priority">urgent</p>
+                    <p class="task-time">00:00</p>
+                    <p class="task-tag">#courses</p>
+                    <div class="task-btn-dropdown">
+                        <button class="task-btn-menu">
+                            <img id="UI-checkbox" alt="UI Menu button">
+                        </button>
+                        <div class="task-dropdown-menu">
+                            <button class="task-btn-dropdown-menu">Nouvelle Tache</button>
+                            <button class="task-btn-dropdown-menu">Parametres</button>
+                            <button class="task-btn-dropdown-menu">Preferences</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="task-container">
+                <div class="task">
+                    <button class="btn-done btn">
+                        <img src="/Front-end/UI-Kit/square-checkbox.png" alt="UI cross when task done">
                     </button>
                     <h6 class="task-name">Achter du pain</h6>
                     <p class="task-priority">urgent</p>
@@ -106,8 +128,8 @@
                             <img src="" alt="UI Menu button">
                         </button>
                         <div class="task-dropdown-menu">
-                            <button class="task-btn-dropdown-menu">Nouvelle Tache</button>
-                            <button class="task-btn-dropdown-menu">Parametre</button>
+                            <button class="task-btn-dropdown-menu">New Task </button>
+                            <button class="task-btn-dropdown-menu">Parametres </button>
                             <button class="task-btn-dropdown-menu">Preferences</button>
                         </div>
                     </div>
@@ -117,31 +139,8 @@
 
             <div class="task-container">
                 <div class="task">
-                    <button class="btn-done">
-                        <img src="" alt="UI cross when task done">
-                    </button>
-                    <h6 class="task-name">Achter du pain</h6>
-                    <p class="task-priority">urgent</p>
-                    <p class="task-time">00:00</p>
-                    <p class="task-tag">#courses</p>
-                    <div class="task-btn-dropdown">
-                        <button class="task-btn-menu">
-                            <img src="" alt="UI Menu button">
-                        </button>
-                        <div class="task-dropdown-menu">
-                            <button class="task-btn-dropdown-menu">Nouvelle Tache</button>
-                            <button class="task-btn-dropdown-menu">Parametre</button>
-                            <button class="task-btn-dropdown-menu">Preferences</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="task-container">
-                <div class="task">
-                    <button class="btn-done">
-                        <img src="" alt="UI cross when task done">
+                    <button class="btn-done btn">
+                        <img src="/Front-end/UI-Kit/square-checkbox.png" alt="UI cross when task done">
                     </button>
                     <h6 class="task-name">Achter du pain</h6>
                     <p class="task-priority">urgent</p>
