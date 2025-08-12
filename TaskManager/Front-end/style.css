@@ -453,8 +453,8 @@ header {
 }
 
 .btn-done {
-    height: 76%;
-    width: 6.5%;
+    height: 56px;
+    width: 56px;
     align-content: center;
     display: flex;
     align-items: center;
@@ -468,6 +468,157 @@ header {
 .btn-done > img {
     height: 110%;
     cursor: url(/Front-end/UI-Kit/pointer.png), auto; 
+}
+
+
+
+
+.task-btn-menu {
+    width: 50px;
+    min-width: fit-content;
+    height: 37px;
+    min-height: fit-content;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+    background-color:rgb(223, 222, 222) ;
+    cursor: url(/Front-end/UI-Kit/pointer.png), auto;
+    box-shadow: 2px 3px 2px grey;
+}
+
+.task-btn-dropdown {
+    position: relative;
+}
+
+.task-dropdown-menu {
+    display: none; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100%;   /* Juste sous le bouton */
+    right: 0;     /* Aligné à gauche */
+    background-color: rgb(223, 222, 222);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    min-width: 200px;
+    max-width: 300px;
+    z-index: 1000;
+    padding: 3px;
+    border-radius: 5px;   
+}
+
+.task-btn-dropdown-menu {
+    cursor: url(/Front-end/UI-Kit/pointer.png), auto;
+    width: 100%;
+    height: 5vh;
+    margin: 2px;
+    border: 0.5px solid grey;
+    background-color:rgb(223, 222, 222);
+    border-radius: 5px;
+    font-family: monospace;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.task-btn-menu > img {
+    width: 25px;
+    height: 27px;
+}
+
+
+.new-task-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: 600ms;
+    
+    
+}
+
+.container-new-task {
+    height: 80vh;
+    width: 70vh;
+    background-color: rgb(223, 222, 222);
+    padding: 1%;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    background-color: rgb(223, 222, 222);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+
+}
+
+.title {
+    border-bottom: 1px solid grey;
+    padding-bottom: 15px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+ .input-bar {
+    width: 65%;
+    height: 130%;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    cursor: text;
+    background-color: rgba(165, 164, 164, 0.842);
+ }
+
+.description > input {
+    height: 300%;
+    
+ }
+
+
+.tags-selection > img {
+    width: 20px;
+}
+
+.tags-choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+}
+
+.tags-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#dropdown-priority {
+    width: 65%;
+    height: 130%;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    cursor: text;
+    background-color: rgba(165, 164, 164, 0.842);
 }
 
 
