@@ -16,6 +16,18 @@ body {
 }
 
 
+
+
+/* ################################################################## */
+/* ################################################################## */
+                    /* CONTAINER LEFT */
+/* ################################################################## */
+/* ################################################################## */
+
+
+
+
+
 .container-left {
     width: 35%;
     max-width: 400px;
@@ -235,8 +247,10 @@ li > img {
 
 /* ################################################################## */
 /* ################################################################## */
+                    /* CONTAINER RIGHT */
 /* ################################################################## */
 /* ################################################################## */
+
 
 
 
@@ -531,6 +545,24 @@ header {
 }
 
 
+
+
+
+
+/* ################################################################## */
+/* ################################################################## */
+                        /* NEW TASK PAGE*/
+/* ################################################################## */
+/* ################################################################## */
+
+
+
+
+
+
+
+
+
 .new-task-page {
     position: fixed;
     top: 0;
@@ -542,13 +574,11 @@ header {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    transition: 600ms;
-    
-    
+    transition: 600ms;  
 }
 
 .container-new-task {
-    height: 80vh;
+    height: 88vh;
     width: 70vh;
     background-color: rgb(223, 222, 222);
     padding: 1%;
@@ -560,8 +590,6 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    
-
 }
 
 .title {
@@ -584,13 +612,50 @@ header {
     border-radius: 15px;
     border: 1px solid rgba(0, 0, 0, 1);
     cursor: text;
-    background-color: rgba(165, 164, 164, 0.842);
+    background-color: rgba(189, 188, 188, 0.842);
+    cursor: url(/Front-end/UI-Kit/cursor-txt.png), auto;
  }
 
 .description > input {
-    height: 300%;
-    
+    height: 300%;    
  }
+
+ #dropdown-priority {
+    width: 67%;
+    height: 130%;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    cursor: text;
+    background-color: rgba(189, 188, 188, 0.842);
+    cursor: url(/Front-end/UI-Kit/pointer.png), auto;
+}
+
+#dropdown-priority-menu {
+    cursor: url(/Front-end/UI-Kit/pointer.png), auto;
+}
+
+ .tags-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.tags-choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;     
+}
+
+.tags-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .tags-selection > button {
     width: 50px;
     min-width: fit-content;
@@ -605,48 +670,38 @@ header {
     background-color:rgb(223, 222, 222) ;
     cursor: url(/Front-end/UI-Kit/pointer.png), auto;
     box-shadow: 2px 3px 2px grey;
-}
-
-.tags-selection {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    margin: 5px;
 }
 
 .tags-selection > button > img {
     width: 20px;
+     cursor: url(/Front-end/UI-Kit/pointer.png), auto;
 }
 
-.tags-choice {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    
+.new-tag {
+    margin-top: 5px;
 }
 
-.tags-button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-
+#save-task {
+    height: 10%;
+    width: 50%;
+    font-family: monospace;
+    font-size: 160%;
+    color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: inset 4px 4px 12px rgb(212, 202, 189);
+    box-shadow: 2px 2px 4px black;
+    border: solid 0.5px #852488;
+    background-color: #852488;
+    z-index: auto;
+    cursor: url(/Front-end/UI-Kit/pointer.png), auto;
 }
 
-#dropdown-priority {
-    width: 67%;
-    height: 130%;
-    border-radius: 15px;
-    border: 1px solid rgba(0, 0, 0, 1);
-    cursor: text;
-    background-color: rgba(165, 164, 164, 0.842);
-}
 
-select {
-    border-radius: 15px;
-}
+
+
+
+
 
 
 

@@ -1,7 +1,13 @@
+
+
+// ########################################################################
+// Building interactivity with buttons and dropdown menus
+
+
 const dropdownBtn = document.querySelector('.btn-dropdown');
 const dropdownMenu = document.querySelector('.dropdown-menu');
-const dropdownChildren = document.querySelectorAll('.btn-dropdown-menu');
-const btn = document.querySelectorAll('.btn');
+
+
 
 
 // drop down menu poping up and off by clicking on the menu button on the top right side 
@@ -17,6 +23,9 @@ dropdownBtn.addEventListener('click',
 
 
 // Changing background of all buttons when mousing over the buttons 
+const btn = document.querySelectorAll('.btn');
+
+
 for (let i = 0; i < btn.length; i++) {
     btn[i].addEventListener('mouseenter', 
         function () {
@@ -32,4 +41,20 @@ for (let i = 0; i < btn.length; i++) {
         }
     )
 };
+
+
+// Changing background of 'save task' button when mousing over 
+const btnSaveTask  = document.querySelector('#save-task');
+
+btnSaveTask.addEventListener('mouseenter', 
+    function () {
+        btnSaveTask.style.background = '#a951acff'        
+    }
+);
+
+btnSaveTask.addEventListener('mouseleave', 
+    function () {
+        btnSaveTask.style.background = '#852488'        
+    }
+);
 

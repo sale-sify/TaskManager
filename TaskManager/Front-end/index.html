@@ -197,11 +197,13 @@
             <div class="inputs task-priority">
                 <p class="categories-priority">Priority</p>
                 <select name="dropdown-priority" id="dropdown-priority">
-                    <option value="Urgent">Urgent</option>
-                    <option value="Prioritized">Prioritized</option>
-                    <option value="Important">Important</option>
-                    <option value="Secondary importance">Secondary importance</option>
-                    <option value="To do one of those days">To do one of those days</option>
+                    <div id="dropdown-priority-menu">
+                        <option value="Urgent">Urgent</option>
+                        <option value="Prioritized">Prioritized</option>
+                        <option value="Important">Important</option>
+                        <option value="Secondary importance">Secondary importance</option>
+                        <option value="To do one of those days">To do one of those days</option>
+                    </div>
                 </select>
             </div>
 
@@ -209,8 +211,8 @@
                 <div class="tags-button">
                     <p class="categories-tags">Tags</p>
                     <div class="tags-selection">
-                        <button id="tag1"><img src="/Front-end/UI-Kit/tags.png" alt="UI tags image"> tags 1 </button>
-                        <button id="tag2"><img src="/Front-end/UI-Kit/tags.png" alt="UI tags image"> tags 2 </button>
+                        <button class="btn" id="tag1"><img src="/Front-end/UI-Kit/tags.png" alt="UI tags image"> tags 1 </button>
+                        <button class="btn" id="tag2"><img src="/Front-end/UI-Kit/tags.png" alt="UI tags image"> tags 2 </button>
                     </div>
                 </div>
             </div>
@@ -227,6 +229,11 @@
                 <input type="date" class="input-bar" name="date" id="date">
 
             </div>
+
+
+            
+            <button id="save-task"> Save Task</button>
+            
 
             
 
