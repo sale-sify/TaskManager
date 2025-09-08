@@ -485,8 +485,6 @@ header {
 }
 
 
-
-
 .task-btn-menu {
     width: 50px;
     min-width: fit-content;
@@ -501,6 +499,10 @@ header {
     background-color:rgb(223, 222, 222) ;
     cursor: url(/Front-end/UI-Kit/pointer.png), auto;
     box-shadow: 2px 3px 2px grey;
+}
+
+.task-btn-menu > img {
+    cursor: url(/Front-end/UI-Kit/pointer.png), auto;
 }
 
 .task-btn-dropdown {
@@ -570,7 +572,7 @@ header {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
-    display: flex; 
+    display: none; 
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -592,9 +594,34 @@ header {
     justify-content: space-around;
 }
 
+.input-container {
+    height: 75%;
+    width: 100%;
+
+}
+
 .title {
     border-bottom: 1px solid grey;
     padding-bottom: 15px;
+    margin-top: 15px;
+}
+
+.closing-btn {
+    position: relative;
+    top: -49px ;
+    right: -210px;
+    cursor: url(/Front-end/UI-Kit/pointer.png), auto;
+    border-radius: 50%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+}
+
+.closing-btn > img {
+    cursor: url(/Front-end/UI-Kit/pointer.png), auto;
 }
 
 .inputs {
@@ -603,26 +630,28 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 20px;
+    height: 14%;
+    
 }
 
  .input-bar {
     width: 65%;
-    height: 130%;
+    height: 30px;
     border-radius: 15px;
     border: 1px solid rgba(0, 0, 0, 1);
     cursor: text;
     background-color: rgba(189, 188, 188, 0.842);
     cursor: url(/Front-end/UI-Kit/cursor-txt.png), auto;
+    
  }
 
 .description > input {
-    height: 300%;    
+    height: 70px;    
  }
 
  #dropdown-priority {
     width: 67%;
-    height: 130%;
+    height: 32px;
     border-radius: 15px;
     border: 1px solid rgba(0, 0, 0, 1);
     cursor: text;
@@ -675,7 +704,7 @@ header {
 
 .tags-selection > button > img {
     width: 20px;
-     cursor: url(/Front-end/UI-Kit/pointer.png), auto;
+    cursor: url(/Front-end/UI-Kit/pointer.png), auto;
 }
 
 .new-tag {
@@ -695,6 +724,8 @@ header {
     background-color: #852488;
     z-index: auto;
     cursor: url(/Front-end/UI-Kit/pointer.png), auto;
+    margin-bottom: 15px;
+
 }
 
 

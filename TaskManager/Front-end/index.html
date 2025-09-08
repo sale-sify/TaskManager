@@ -50,7 +50,7 @@
             </ul>
         </div>
         <div class="add-new-task">
-        <button class="btn">
+        <button class="btn new-task-btn">
             <img src="/Front-end/UI-Kit/gros-plus.png" alt="Add new task button">
         </button>
         </div>
@@ -70,7 +70,7 @@
                 </button>
 
                 <button class="left-side-nav btn">
-                    <img class="UI-btn" src="/Front-end/UI-Kit/plus.png" alt="Add new task button">
+                    <img class="UI-btn new-task-btn" src="/Front-end/UI-Kit/plus.png" alt="Add new task button">
                 </button>
 
                 <input class="search-bar" type="text" name="search" placeholder="🔎​ Search a task ">
@@ -83,7 +83,7 @@
                         <img class="UI-btn" src="/Front-end/UI-Kit/menu.png" alt="UI Menu button">
                     </button>
                     <div class="dropdown-menu">
-                        <button class="btn-dropdown-menu btn">New Task <img src="/Front-end/UI-Kit/gros-plus.png" alt="UI new task button"></button>
+                        <button class="btn-dropdown-menu btn new-task-btn">New Task <img src="/Front-end/UI-Kit/gros-plus.png" alt="UI new task button"></button>
                         <button class="btn-dropdown-menu btn">Parameters <img src="/Front-end/UI-Kit/parametres.png" alt="UI parametres button"></button>
                         <button class="btn-dropdown-menu btn">Preferences <img src="/Front-end/UI-Kit/preferences.png" alt="UI preferences button"></button>
                     </div>
@@ -100,73 +100,7 @@
                 </button>
             </div>
 
-            <div class="task-container">
-                <div class="task">
-                    
-                    <button class="btn-done btn"><img src="/Front-end/UI-Kit/square-checkbox.png" alt="UI cross when task done"></button>
-                    <h6 class="task-name">Achter du pain</h6>
-                    <p class="task-priority">urgent</p>
-                    <p class="task-time">00:00</p>
-                    <p class="task-tag">#courses</p>
-                    <div class="task-btn-dropdown">
-                        <button class="task-btn-menu">
-                            <img id="UI-checkbox" src="/Front-end/UI-Kit/menu.png" alt="UI Menu button">
-                        </button>
-                        <div class="task-dropdown-menu">
-                            <button class="task-btn-dropdown-menu">Nouvelle Tache</button>
-                            <button class="task-btn-dropdown-menu">Parametres</button>
-                            <button class="task-btn-dropdown-menu">Preferences</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="task-container">
-                <div class="task">
-                    <button class="btn-done btn">
-                        <img src="/Front-end/UI-Kit/square-checkbox.png" alt="UI cross when task done">
-                    </button>
-                    <h6 class="task-name">Achter du pain</h6>
-                    <p class="task-priority">urgent</p>
-                    <p class="task-time">00:00</p>
-                    <p class="task-tag">#courses</p>
-                    <div class="task-btn-dropdown">
-                        <button class="task-btn-menu">
-                            <img src="/Front-end/UI-Kit/menu.png" alt="UI Menu button">
-                        </button>
-                        <div class="task-dropdown-menu">
-                            <button class="task-btn-dropdown-menu">New Task </button>
-                            <button class="task-btn-dropdown-menu">Parametres </button>
-                            <button class="task-btn-dropdown-menu">Preferences</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="task-container">
-                <div class="task">
-                    <button class="btn-done btn">
-                        <img src="/Front-end/UI-Kit/square-checkbox.png" alt="UI cross when task done">
-                    </button>
-                    <h6 class="task-name">Achter du pain</h6>
-                    <p class="task-priority">urgent</p>
-                    <p class="task-time">00:00</p>
-                    <p class="task-tag">#courses</p>
-                    <div class="task-btn-dropdown">
-                        <button class="task-btn-menu">
-                            <img src="/Front-end/UI-Kit/menu.png" alt="UI Menu button">
-                        </button>
-                        <div class="task-dropdown-menu">
-                            <button class="task-btn-dropdown-menu">Nouvelle Tache</button>
-                            <button class="task-btn-dropdown-menu">Parametre</button>
-                            <button class="task-btn-dropdown-menu">Preferences</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+            
 
         </div>
 
@@ -183,54 +117,58 @@
 
         <div class="container-new-task">
             <h3 class="title">New task !</h3>
-
-            <div class="inputs name">
-                <p class="categories-names">Name</p>
-                <input type="text" class="input-bar" name="input-name-bar">
-            </div>
-
-            <div class="inputs description">
-                <p class="categories-description">Description</p>
-                <input type="text" class="input-bar" name="input-description-bar">
-            </div>
-
-            <div class="inputs task-priority">
-                <p class="categories-priority">Priority</p>
-                <select name="dropdown-priority" id="dropdown-priority">
-                    <div id="dropdown-priority-menu">
-                        <option value="Urgent">Urgent</option>
-                        <option value="Prioritized">Prioritized</option>
-                        <option value="Important">Important</option>
-                        <option value="Secondary importance">Secondary importance</option>
-                        <option value="To do one of those days">To do one of those days</option>
-                    </div>
-                </select>
-            </div>
-
-            <div class="inputs tags-choice">
-                <div class="tags-button">
-                    <p class="categories-tags">Tags</p>
-                    <div class="tags-selection">
-                        <button class="btn" id="tag1"><img src="/Front-end/UI-Kit/tags.png" alt="UI tags image"> tags 1 </button>
-                        <button class="btn" id="tag2"><img src="/Front-end/UI-Kit/tags.png" alt="UI tags image"> tags 2 </button>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="inputs new-tag">
-                <p class="categories-new-tags">New tag</p>
-                <input type="text" class="input-bar" name="input-new-tag">
-            </div>
+            <button class="closing-btn"><img  src="/Front-end/UI-Kit/close.png" alt="UI closing button"></button>
             
 
-            <div class="inputs date-choice">
-                <p>Date</p>
-                <input type="date" class="input-bar" name="date" id="date">
+
+            <div class="input-container">
+                <div class="inputs name">
+                    <p class="categories-names">Name</p>
+                    <input id="input-name" type="text" class="input-bar" name="input-name-bar">
+                </div>
+
+                <div class="inputs description">
+                    <p class="categories-description">Description</p>
+                    <input id="input-description" type="text" class="input-bar" name="input-description-bar">
+                </div>
+
+                <div class="inputs task-priority">
+                    <p class="categories-priority">Priority</p>
+                    <select name="dropdown-priority" id="dropdown-priority">
+                        <div id="dropdown-priority-menu">
+                            <option value="Urgent">Urgent</option>
+                            <option value="Prioritized">Prioritized</option>
+                            <option value="Important">Important</option>
+                            <option value="Secondary importance">Secondary importance</option>
+                            <option value="To do one of those days">To do one of those days</option>
+                        </div>
+                    </select>
+                </div>
+
+                <div class="inputs tags-choice">
+                    <div class="tags-button">
+                        <p class="categories-tags">Tags</p>
+                        <div class="tags-selection">
+                            <button class="btn" id="tag1"><img src="/Front-end/UI-Kit/tags.png" alt="UI tags image"> tags 1 </button>
+                            <button class="btn" id="tag2"><img src="/Front-end/UI-Kit/tags.png" alt="UI tags image"> tags 2 </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="inputs new-tag">
+                    <p class="categories-new-tags">New tag</p>
+                    <input id="input-new-tags" type="text" class="input-bar" name="input-new-tag">
+                </div>
+                
+
+                <div class="inputs date-choice">
+                    <p>Date</p>
+                    <input id="input-date" type="date" class="input-bar" name="date" id="date">
+
+                </div>
 
             </div>
-
-
             
             <button id="save-task"> Save Task</button>
             
