@@ -1,190 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebSiteName || Tasks Manager</title>
-    <link rel="stylesheet" href="/Front-end/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planning viennoiseries | Crèche</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
-
-
 <body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <p class="eyebrow">Crèche • organisation hebdomadaire</p>
+        <h1>Planning interactif des viennoiseries</h1>
+      </div>
+      <button id="randomizeBtn" class="button">🎲 Réassigner aléatoirement</button>
+    </header>
 
-
-
-
-    <section class="container-left">
-
-        <div class="user">
-            <img src="/Front-end/Images/user-pic.JPG" alt="User picture">
-            <h3 id="user-name">Romain Sales</h3>
-        </div>
-
-        <div class="long-task-reminder">
-            <h4 class="long-task-title">Long task reminder</h4>
-            <ul class="long-task-list">
-                <li> <img src="/Front-end/UI-Kit/cercle-checkbox.png" alt="UI circle purple check box">long task 1</li>
-                <li><img src="/Front-end/UI-Kit/cercle-checkbox.png" alt="UI circle purple check box">long task 2</li>
-                <li><img src="/Front-end/UI-Kit/cercle-checkbox.png" alt="UI circle purple check box">long task 3</li>
-            </ul>
-        </div>
-
-        <div class="choose-date">
-            <ul class="choose-date-list">
-                <li class="btn"><img src="/Front-end/UI-Kit/cercle-checkbox.png" alt="UI circle purple check box">Today</li>
-                <li class="btn"><img src="/Front-end/UI-Kit/cercle-checkbox.png" alt="UI circle purple check box">Tomorrow</li>
-                <li class="btn"><img src="/Front-end/UI-Kit/cercle-checkbox.png" alt="UI circle purple check box">In 2 days</li>
-                <li class="btn"><img src="/Front-end/UI-Kit/cercle-checkbox.png" alt="UI circle purple check box">All</li>
-            </ul>
-        </div>
-
-        <div class="tags">
-            <div class="tags-title">
-                <h4>Tags</h4>
-                <img src="/Front-end/UI-Kit/plus.png" alt="Add new tag button">
-            </div>
-            <ul class="tags-list">
-                <li><img src="/Front-end/UI-Kit/tags.png" alt="UI tags">tags 1</li>
-                <li><img src="/Front-end/UI-Kit/tags.png" alt="UI tags">tags 2</li>
-                <li><img src="/Front-end/UI-Kit/tags.png" alt="UI tags">tags 3</li>
-            </ul>
-        </div>
-        <div class="add-new-task">
-        <button class="btn new-task-btn">
-            <img src="/Front-end/UI-Kit/gros-plus.png" alt="Add new task button">
-        </button>
-        </div>
+    <section class="panel">
+      <h2>Groupes de parents</h2>
+      <p>Modifiez la liste des groupes/parents (ajout, renommage, suppression), puis générez une nouvelle semaine.</p>
+      <form id="groupForm" class="group-form">
+        <input id="groupInput" type="text" placeholder="Ex: Groupe A" maxlength="25" />
+        <button class="button" type="submit">Ajouter</button>
+      </form>
+      <ul id="groupList" class="chips"></ul>
     </section>
 
-
-
-
-
-
-    <section class="container-right">
-
-        <header>
-            <div class="left-side-header">
-                <button class="left-side-nav btn">
-                    <img class="UI-btn" src="/Front-end/UI-Kit/notification.png" alt="">
-                </button>
-
-                <button class="left-side-nav btn">
-                    <img class="UI-btn new-task-btn" src="/Front-end/UI-Kit/plus.png" alt="Add new task button">
-                </button>
-
-                <input class="search-bar" type="text" name="search" placeholder="🔎​ Search a task ">
-            </div>
-
-            <div class="right-side-header">
-                <h1 class="web-site-name">WebSiteName</h1>
-                <div class="btn-dropdown">
-                    <button class="btn-menu btn">
-                        <img class="UI-btn" src="/Front-end/UI-Kit/menu.png" alt="UI Menu button">
-                    </button>
-                    <div class="dropdown-menu">
-                        <button class="btn-dropdown-menu btn new-task-btn">New Task <img src="/Front-end/UI-Kit/gros-plus.png" alt="UI new task button"></button>
-                        <button class="btn-dropdown-menu btn">Parameters <img src="/Front-end/UI-Kit/parametres.png" alt="UI parametres button"></button>
-                        <button class="btn-dropdown-menu btn">Preferences <img src="/Front-end/UI-Kit/preferences.png" alt="UI preferences button"></button>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        
-        <div class="main">
-            <div class="day-container">
-                <p class="selected-day">Aujourd'hui</p>
-                <button class="btn-filter btn">
-                    <img src="/Front-end/UI-Kit/preferences.png" alt="UI filter button">
-                </button>
-            </div>
-
-            
-
+    <section class="panel">
+      <div class="panel-title">
+        <h2>Semaine en cours</h2>
+        <div class="actions">
+          <button id="copyBtn" class="button button-light">Copier le planning</button>
+          <button id="exportPdfBtn" class="button button-soft">Exporter en PDF</button>
         </div>
-
-
-
-
-
-
-        
-        
+      </div>
+      <p class="hint">Un groupe peut apparaître plusieurs fois si vous avez moins de 5 groupes.</p>
+      <div id="schedule" class="schedule"></div>
     </section>
+  </main>
 
-    <section class="new-task-page">
+  <template id="dayRowTemplate">
+    <article class="day-row">
+      <label class="day-name"></label>
+      <select class="group-select"></select>
+    </article>
+  </template>
 
-        <div class="container-new-task">
-            <h3 class="title">New task !</h3>
-            <button class="closing-btn"><img  src="/Front-end/UI-Kit/close.png" alt="UI closing button"></button>
-            
-
-
-            <div class="input-container">
-                <div class="inputs name">
-                    <p class="categories-names">Name</p>
-                    <input id="input-name" type="text" class="input-bar" name="input-name-bar">
-                </div>
-
-                <div class="inputs description">
-                    <p class="categories-description">Description</p>
-                    <input id="input-description" type="text" class="input-bar" name="input-description-bar">
-                </div>
-
-                <div class="inputs task-priority">
-                    <p class="categories-priority">Priority</p>
-                    <select name="dropdown-priority" id="dropdown-priority">
-                        <div id="dropdown-priority-menu">
-                            <option value="Urgent">Urgent</option>
-                            <option value="Prioritized">Prioritized</option>
-                            <option value="Important">Important</option>
-                            <option value="Secondary importance">Secondary importance</option>
-                            <option value="To do one of those days">To do one of those days</option>
-                        </div>
-                    </select>
-                </div>
-
-                <div class="inputs tags-choice">
-                    <div class="tags-button">
-                        <p class="categories-tags">Tags</p>
-                        <div class="tags-selection">
-                            <button class="btn" id="tag1"><img src="/Front-end/UI-Kit/tags.png" alt="UI tags image"> tags 1 </button>
-                            <button class="btn" id="tag2"><img src="/Front-end/UI-Kit/tags.png" alt="UI tags image"> tags 2 </button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="inputs new-tag">
-                    <p class="categories-new-tags">New tag</p>
-                    <input id="input-new-tags" type="text" class="input-bar" name="input-new-tag">
-                </div>
-                
-
-                <div class="inputs date-choice">
-                    <p>Date</p>
-                    <input id="input-date" type="date" class="input-bar" name="date" id="date">
-
-                </div>
-
-            </div>
-            
-            <button id="save-task"> Save Task</button>
-            
-
-            
-
-        </div>
-    </section>
-
-    
-
-
-
-
-
-
-    <script src="/Front-end/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
